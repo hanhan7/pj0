@@ -1,7 +1,9 @@
 package com.han.core.data.dao;
 
 import java.io.Serializable;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by VO VAN NHAN on 5/21/2018.
@@ -15,7 +17,7 @@ public interface GenericDao<ID extends Serializable,T> {
 
     T findById(ID var1);
 
-    Object[] findByProperty(String property, Object value, String sortExpression, String sortDirection);
+    public Object[] findByProperty(HashMap<String,Object> property, String sortExpression, String sortDirection , Integer offset, Integer limit );
 
      Integer delete(List<ID> ids);
 }
