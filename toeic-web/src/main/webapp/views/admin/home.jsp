@@ -9,6 +9,7 @@
     <title><fmt:message key="label.home" bundle="${lang}"/></title>
 </head>
 <body>
+<p>xin chao</p>
 <div class="main-content">
     <div class="main-content-inner">
         <div class="breadcrumbs ace-save-state" id="breadcrumbs">
