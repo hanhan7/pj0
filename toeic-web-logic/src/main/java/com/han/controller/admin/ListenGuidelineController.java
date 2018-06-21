@@ -68,6 +68,9 @@ public class ListenGuidelineController extends HttpServlet {
         } else if (command.getUrlType() != null && command.getUrlType().equals(WebConstant.URL_EDIT)){
             RequestDispatcher rd = request.getRequestDispatcher("/views/admin/listenguideline/edit.jsp");
             rd.forward(request, response);
+        } else if (command.getUrlType() != null && command.getUrlType().equals("jquery")){
+            RequestDispatcher rd = request.getRequestDispatcher("/views/web/jquery.jsp");
+            rd.forward(request, response);
         }
         session.removeAttribute(WebConstant.ALERT);
         session.removeAttribute(WebConstant.MESSAGE_RESPONSE);

@@ -92,6 +92,7 @@
         </div>
     </div>
 </div>
+
 <script>
     var listenGuidelineId = '';
     <c:if test="${not empty item.pojo.listenGuidelineId}">
@@ -104,6 +105,7 @@
         $('#uploadImage').change(function () {
             readURL(this, "viewImage");
         });
+
     });
     function validateData() {
         $('#formEdit').validate({
