@@ -12,7 +12,9 @@ public class UserDTO implements Serializable {
     private Integer userId;
     private String name;
     private String password;
-
+    private String fullName;
+    private Timestamp createdDate;
+    private RoleDTO roleDTO;
     public Integer getUserId() {
         return userId;
     }
@@ -61,8 +63,6 @@ public class UserDTO implements Serializable {
         this.roleDTO = roleDTO;
     }
 
-    private String fullName;
-    private Timestamp createdDate;
-    private RoleDTO roleDTO;
+
 
 }
