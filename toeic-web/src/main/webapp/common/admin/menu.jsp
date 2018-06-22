@@ -4,9 +4,9 @@
 <c:url value="/admin-guideline-listen-list" var="listenGuidelineListUrl">
     <c:param name="urlType" value="url_list"/>
 </c:url>
-<c:url value="/admin-user-list.html" var="userListUrl">
-    <c:param name="urlType" value="url_list"/>
-</c:url>
+<%--<c:url value="/admin-user-list.html" var="userListUrl">--%>
+    <%--<c:param name="urlType" value="url_list"/>--%>
+<%--</c:url>--%>
 <c:url value="/admin-guideline-listen-list" var="jquery">
     <c:param name="urlType" value="jquery"/>
 </c:url>
@@ -95,15 +95,15 @@
                 <b class="arrow fa fa-angle-down"></b>
             </a>
             <b class="arrow"></b>
-            <ul class="submenu">
-                <li class="">
-                    <a href="<c:url value="/admin-exericse-upload.html"/>">
-                        <i class="menu-icon fa fa-caret-right"></i>
-                        <fmt:message key="label.exercise.audio.image.upload" bundle="${lang}"/>
-                    </a>
-                    <b class="arrow"></b>
-                </li>
-            </ul>
+            <%--<ul class="submenu">--%>
+                <%--<li class="">--%>
+                    <%--<a href="<c:url value="/admin-exericse-upload.html"/>">--%>
+                        <%--<i class="menu-icon fa fa-caret-right"></i>--%>
+                        <%--<fmt:message key="label.exercise.audio.image.upload" bundle="${lang}"/>--%>
+                    <%--</a>--%>
+                    <%--<b class="arrow"></b>--%>
+                <%--</li>--%>
+            <%--</ul>--%>
         </li>
     </ul>
     <div class="sidebar-toggle sidebar-collapse">

@@ -6,6 +6,7 @@ package com.han.controller.admin;
 
 import com.han.command.ListenGuidelineCommand;
 import com.han.core.common.utils.UploadUtil;
+import com.han.core.dto.JqueryDTO;
 import com.han.core.dto.ListenGuidelineDTO;
 import com.han.core.service.ListenGuidelineService;
 import com.han.core.service.impl.ListenGuidelineServiceImpl;
@@ -61,14 +62,25 @@ public class ListenGuidelineController extends HttpServlet {
 //        command.setListResult((List<ListenGuidelineDTO>)objects[1]);
 ////        command.setTotalItems((Integer) objects[0]);
 //        command.setTotalItems(Integer.parseInt(objects[0].toString()));
-        request.setAttribute(WebConstant.LIST_ITEMS, command);
+
         if (command.getUrlType() != null && command.getUrlType().equals(WebConstant.URL_LIST)) {
+            request.setAttribute(WebConstant.LIST_ITEMS, command);
             RequestDispatcher rd = request.getRequestDispatcher("/views/admin/listenguideline/list.jsp");
             rd.forward(request, response);
         } else if (command.getUrlType() != null && command.getUrlType().equals(WebConstant.URL_EDIT)){
             RequestDispatcher rd = request.getRequestDispatcher("/views/admin/listenguideline/edit.jsp");
             rd.forward(request, response);
-        } else if (command.getUrlType() != null && command.getUrlType().equals("jquery")){
+        } else if (command.getUrlType() != null && command.getUrlType().equals("jquery")) {
+            List<JqueryDTO> jqueryDTOs = new ArrayList<>();
+            JqueryDTO jqueryDTO1 = new JqueryDTO();
+            jqueryDTO1.setName("nhan");
+            jqueryDTO1.setAddress("hue");
+            JqueryDTO jqueryDTO2 = new JqueryDTO();
+            jqueryDTO2.setName("trang");
+            jqueryDTO2.setAddress("hanoi");
+            jqueryDTOs.add(jqueryDTO1);
+            jqueryDTOs.add(jqueryDTO2);
+            request.setAttribute("listDemo",jqueryDTOs);
             RequestDispatcher rd = request.getRequestDispatcher("/views/web/jquery.jsp");
             rd.forward(request, response);
         }
