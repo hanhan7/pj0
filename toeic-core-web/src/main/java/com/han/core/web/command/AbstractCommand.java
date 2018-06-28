@@ -12,7 +12,7 @@ public class AbstractCommand<T> {
     private String crudaction;
     private List<T> listResult;
     private String tableId = "tableList";
-    private int maxPageItems = 2;
+    private int maxPageItems = 4;
     private int totalItems = 0;
     private int firstItem = 0;
     private String sortExpression;

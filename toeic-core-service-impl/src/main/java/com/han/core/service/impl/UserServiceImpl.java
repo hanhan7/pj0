@@ -43,4 +43,11 @@ public class UserServiceImpl implements UserService {
         objects[1] = userDTOs;
         return objects;
     }
+
+    @Override
+    public UserDTO findById(Integer userId) {
+        UserEntity entity = userDao.findById(userId);
+        UserDTO dto = UserBeanUtil.entity2Dto(entity);
+        return dto;
+    }
 }

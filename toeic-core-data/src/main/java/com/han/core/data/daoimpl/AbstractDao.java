@@ -91,7 +91,7 @@ public abstract class AbstractDao<ID extends Serializable, T> implements Generic
 
     }
 
-    public T findById(ID id) {
+    public T findById(ID id){
         T result = null;
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();

@@ -17,6 +17,8 @@ public class ListenGuidelineServiceImpl implements ListenGuidelineService {
 
     private ListenGuidelineDao listenGuidelineDao = new ListenGuidelineDaoImpl();
 
+
+
 //    @Override
 //    public Object[] findListenGuidelineByProperties(String property,
 //                            Object value, String sortExpression, String sortDirection, Integer offset, Integer limit) {

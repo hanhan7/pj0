@@ -10,4 +10,7 @@
     <decorator name="home" page="web.jsp">
         <pattern>/home*</pattern>
     </decorator>
+    <exclude>
+        <patern>/ajax*</patern>
+    </exclude>
 </decorators>
